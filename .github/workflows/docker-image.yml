@@ -19,4 +19,3 @@ jobs:
         name: organization/image_name
         username: ${{ secrets.DOCKER_HUB_USER }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-        run: docker build . --file Dockerfile --tag dragonkoc/test_it:$(date +%s)
