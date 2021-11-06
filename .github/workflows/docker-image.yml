@@ -1,5 +1,3 @@
-![example workflow](https://github.com/DragonKoc/itea_test/actions/workflows/docker-image.yml/badge.svg)
-
 name: Docker Image CI
 
 on:
@@ -17,6 +15,6 @@ jobs:
       if: success()
       uses: manusa/actions-publish-docker@v1.1.2
       with:
-        name: organization/image_name
+        name: dragonkoc/github_test
         username: ${{ secrets.DOCKER_HUB_USER }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
