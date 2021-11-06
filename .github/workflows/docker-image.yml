@@ -1,3 +1,5 @@
+![example workflow](https://github.com/DragonKoc/itea_test/actions/workflows/docker-image.yml/badge.svg)
+
 name: Docker Image CI
 
 on:
@@ -11,7 +13,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
- 
     - name: Dockerize
       if: success()
       uses: manusa/actions-publish-docker@v1.1.2
