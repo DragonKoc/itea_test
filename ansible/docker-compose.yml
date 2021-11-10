@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  alfa:
+    image: dragonkoc/test_it:v1
+    ports:
+      - 81:80
+    environment:
+      - TEXT=work1
+
+  alfa2:
+    image: dragonkoc/test_it:v1
+    ports:
+      - 82:80
+    environment:
+      - TEXT=work2
+
+
+
+
+
+    

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitapp
+  labels:
+    app: gitapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      pod: gitapp-container
+  template:
+    metadata:
+      labels:
+        pod: gitapp-container
+    spec:
+      containers:
+        - name: gitapp
+          image: dragonkoc/test_it:v1
+          ports:
+            - containerPort: 80

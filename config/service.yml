@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: gitapp-service
+spec:
+  selector:
+    pod: gitapp-container
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30222
+  type: NodePort
