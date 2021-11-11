@@ -70,16 +70,16 @@
         name: docker-compose
   become: yes
     
-# - name: Finish Install 
-#   block:
-#     - name: Add user to group docker
-#       user:
-#         name: "{{ ansible_user }}"
-#         append: yes
-#         groups: docker
-#     - name: restart server      
-#       # shell: reboot
-#       # async: 1000
-#       # poll: 0
-#       reboot:
-#   become: yes
+- name: Finish Install 
+  block:
+    - name: Add user to group docker
+      user:
+        name: "{{ ansible_user }}"
+        append: yes
+        groups: docker
+    - name: restart server      
+      # shell: reboot
+      # async: 1000
+      # poll: 0
+      reboot:
+  become: yes
